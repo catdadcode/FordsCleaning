@@ -1,0 +1,41 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="template.master.cs" Inherits="fordscleaning_dVAC_template" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>dVAC</title>
+    <link rel="Stylesheet" type="text/css" href="StyleSheet.css" />
+    <script type="text/javascript">
+            function swapImage(imgN,imgU)
+            {
+                if(document.images)document.images[imgN].src=imgU;
+            }
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="frame">
+            <div id="top">
+            <a title="Schedule A Job" href="Schedule.aspx" onmouseover="swapImage( 'schedule' , 'images/schedulehover.png' )"
+            onmouseout="swapImage( 'schedule' , 'images/schedule.png' )">
+            <img name="schedule" style="border-width: 0px; position:relative; " src="images/schedule.png" />
+        </a>&nbsp &nbsp &nbsp <a title="Job Tracker" href="JobTracker.aspx" onmouseover="swapImage( 'job' , 'images/jobhover.png' )"
+            onmouseout="swapImage( 'job' , 'images/job.png' )">
+            <img name="job" style="border-width: 0px;" src="images/job.png" />
+        </a>&nbsp &nbsp &nbsp <a title="Customer Tracker" href="CustomerTracker.aspx" onmouseover="swapImage( 'customers' , 'images/customershover.png' )"
+            onmouseout="swapImage( 'customers' , 'images/customers.png' )">
+            <img name="customers" style="border-width: 0px;" src="images/customers.png" />
+        </a>&nbsp &nbsp &nbsp <a title="To Do List" href="ToDoList.aspx" onmouseover="swapImage( 'todolist' , 'images/todolisthover.png' )"
+            onmouseout="swapImage( 'todolist' , 'images/todolist.png' )">
+            <img name="todolist" style="border-width: 0px;" src="images/todolist.png" /></a>
+            </div>
+            <div id="middle">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="bottom">
+            </div>
+        </div>
+        </div>
+    </form>
+</body>
+</html>

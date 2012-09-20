@@ -1,0 +1,127 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="main.master.cs" Inherits="fordscleaning_templates_MasterPage" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <link rel="Stylesheet" type="text/css" href="http://www.fordscleaning.com/fordscleaning.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="frame">
+            <div id="top">
+                <a href="http://www.fordscleaning.com">
+                    <img class="noborder" alt="Fordscleaning.com" src="http://www.fordscleaning.com/images/FordsCleaningBanner.png" /></a>
+            </div>
+            <div id="navbar">
+                <center>
+                    <asp:Menu ID="mainMenu" runat="server" BackColor="Transparent" DynamicHorizontalOffset="2"
+                        Font-Bold="True" Font-Names="Verdana" Font-Size="Small" ForeColor="#aa0000" Orientation="Horizontal"
+                        StaticSubMenuIndent="10px" Width="700px">
+                        <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <DynamicHoverStyle BackColor="#AA0000" ForeColor="White" />
+                        <DynamicMenuStyle BackColor="#FFFFCC" BorderColor="#AA0000" BorderStyle="Solid" />
+                        <StaticSelectedStyle BackColor="#FFCC66" />
+                        <DynamicSelectedStyle BackColor="#FFCC66" />
+                        <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <Items>
+                            <asp:MenuItem Text="Home" NavigateUrl="http://www.fordscleaning.com" Value="Home"></asp:MenuItem>
+                            <asp:MenuItem Text="Our Services" Value="Our Services" NavigateUrl="http://www.fordscleaning.com/OurServices.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Get A Quote!" Value="Get A Quote!" NavigateUrl="http://www.fordscleaning.com/RequestBid.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Job Opportunities" Value="Job Opportunities" NavigateUrl="http://www.fordscleaning.com/JobOpportunities.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Blog" Value="Blog" NavigateUrl="http://www.fordscleaning.com/FordsBlog.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Contact Us" Value="Contact Us" NavigateUrl="http://www.fordscleaning.com/ContactUs.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="About Us" Value="About Us" NavigateUrl="http://www.fordscleaning.com/AboutUs.aspx">
+                            </asp:MenuItem>
+                        </Items>
+                        <StaticHoverStyle BackColor="#AA0000" ForeColor="White" />
+                        <DynamicItemTemplate>
+                            <center>
+                                <%# Eval("Text") %>
+                            </center>
+                        </DynamicItemTemplate>
+                    </asp:Menu>
+                </center>
+                <asp:LoginView ID="LoginView1" runat="server">
+                    <LoggedInTemplate>
+                        <div class="panelTitle">
+                            Control Panel
+                        </div>
+                        <div class="panel">
+                            <asp:LoginStatus ID="LoginStatus1" runat="server" />
+                            of
+                            <asp:LoginName ID="LoginName1" runat="server" />
+                            <br />
+                            <asp:Button ID="btnEditWelcomeMessage" runat="server" Text="Edit About Us"
+                                Font-Bold="True" Width="175px" CausesValidation="False" PostBackUrl="http://www.fordscleaning.com/admin/EditWelcomeMessage.aspx"
+                                UseSubmitBehavior="False" />
+                            <asp:Button ID="btnEditServices" runat="server" Text="Edit Services" Font-Bold="True"
+                                Width="175px" CausesValidation="False" PostBackUrl="http://www.fordscleaning.com/OurServices.aspx"
+                                UseSubmitBehavior="False" />
+                            <asp:Button ID="btnEditJobOpportunities" runat="server" Text="Edit Job Opportunities"
+                                Font-Bold="True" Width="175px" CausesValidation="False" PostBackUrl="http://www.fordscleaning.com/JobOpportunities.aspx"
+                                UseSubmitBehavior="False" /><br />
+                            <asp:Button ID="btnAddBlog" runat="server" Text="New Blog" Font-Bold="True" Width="175px"
+                                CausesValidation="False" PostBackUrl="http://www.fordscleaning.com/admin/AddEditBlog.aspx"
+                                UseSubmitBehavior="False" />
+                            <asp:Button ID="btnCreateNewsletter" runat="server" Text="Create Newsletter" Font-Bold="True"
+                                Width="175px" CausesValidation="False" PostBackUrl="http://www.fordscleaning.com/admin/CreateNewsletter.aspx"
+                                UseSubmitBehavior="False" />
+                            <asp:Button ID="btnNewAd" runat="server" Text="New Advertisement" Font-Bold="True"
+                                Width="175px" CausesValidation="False" PostBackUrl="http://www.fordscleaning.com/admin/NewAd.aspx"
+                                UseSubmitBehavior="False" /><br />
+                            <asp:Button ID="btnNewPromotion" runat="server" Text="New Promotion" Font-Bold="True"
+                                Width="175px" CausesValidation="False" PostBackUrl="http://www.fordscleaning.com/admin/AddEditPromotion.aspx"
+                                UseSubmitBehavior="False" />
+                        </div>
+                    </LoggedInTemplate>
+                </asp:LoginView>
+                <br />
+            </div>
+            <div id="middle">
+                <div id="content">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <div>
+                <img src="http://www.fordscleaning.com/images/bottomrounded.png" />
+            </div>
+            <div id="bottom">
+                <center>
+                    <table style="width: 750px;">
+                        <tr>
+                            <td style="text-align: left;">
+                                <%--<div style="width: 215px; border: solid 3px #aa0000; background-color: #ffffcc; padding: 5px;">
+                                    <a href="http://www.chevtek.com">
+                                        <img border="0" src="http://www.codetunnel.com/content/images/createdby.png" /></a>
+                                </div>--%>
+                            </td>
+                            <td style="width: 30px; text-align: right;">
+                                <div id="loginButton" runat="server">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </center>
+            </div>
+        </div>
+    </form>
+
+    <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+
+    <script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-7292713-3");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="afmain.master.cs" Inherits="fordscleaning_templates_MasterPage" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <link rel="Stylesheet" type="text/css" href="http://www.fordscleaning.com/fordscleaning.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="frame">
+            <div id="top">
+                <a href="http://www.fordscleaning.com">
+                    <img class="noborder" alt="Fordscleaning.com" src="http://www.fordscleaning.com/images/AprilFools/afBanner.gif" /></a>
+            </div>
+            <div id="navbar">
+                <center>
+                    <asp:Menu ID="mainMenu" runat="server" BackColor="#FFFBD6" DynamicHorizontalOffset="2"
+                        Font-Bold="True" Font-Names="Verdana" Font-Size="Small" ForeColor="#990000" Orientation="Horizontal"
+                        StaticSubMenuIndent="10px">
+                        <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <DynamicHoverStyle BackColor="#990000" ForeColor="White" />
+                        <DynamicMenuStyle BackColor="#FFFBD6" />
+                        <StaticSelectedStyle BackColor="#FFCC66" />
+                        <DynamicSelectedStyle BackColor="#FFCC66" />
+                        <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <Items>
+                            <asp:MenuItem Text="The Goat Den" NavigateUrl="http://www.fordscleaning.com" SeparatorImageUrl="~/fordscleaning/images/sep.gif"
+                                Value="Home"></asp:MenuItem>
+                            <asp:MenuItem Text="The Goat's Services" Value="Our Services" NavigateUrl="http://www.fordscleaning.com/OurServices.aspx"
+                                SeparatorImageUrl="~/fordscleaning/images/sep.gif"></asp:MenuItem>
+                            <asp:MenuItem Text="All About the Mountain" Value="Job Estimator" SeparatorImageUrl="~/fordscleaning/images/sep.gif"
+                                NavigateUrl="http://www.fordscleaning.com/JobEstimator.aspx" Enabled="False"></asp:MenuItem>
+                            <asp:MenuItem Text="What he says goes" Value="Job Opportunities" NavigateUrl="http://www.fordscleaning.com/JobOpportunities.aspx"
+                                SeparatorImageUrl="~/fordscleaning/images/sep.gif" Enabled="False"></asp:MenuItem>
+                        </Items>
+                        <StaticHoverStyle BackColor="#990000" ForeColor="White" />
+                        <DynamicItemTemplate>
+                            <center>
+                                <%# Eval("Text") %>
+                            </center>
+                        </DynamicItemTemplate>
+                    </asp:Menu>
+                </center>
+            </div>
+            <div id="middle">
+                <table>
+                    <tr>
+                        <td id="left" style="height: 289px">
+                            <div id="content">
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </div>
+                        </td>
+                        <td id="right" style="height: 289px">                            
+                            <div class="panelTitle">
+                                The Goat Pics&nbsp;</div>
+                            <div id="QuickLinks" class="panel" runat="server">
+                            <img src="http://www.tonyboon.co.uk/imgs/images/goat.jpg" width=200 />
+                            <br />
+                            <img src="http://www.nwf.org/yellowstone/images/mountainGoat.jpg" width=200 />
+                            <br />                            
+                            <img src="http://www.alanbauer.com/images/Critters/Web%20Mountain%20goat%20looking%20at%20camera-Vert.jpg" width=200 />
+                            <br />                            
+                            <img src="http://www.picture-newsletter.com/foamparty/foam-party-2i3i.jpg" width=200 />
+                            <br />
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="bottom">
+                <table style="width: 750px;">
+                    <tr>
+                        <td style="text-align: center;">
+                            <a href="http://www.fordscleaning.com/PrivacyPolicy.aspx">Privacy Policy</a> -=-
+                            <a href="http://www.fordscleaning.com/UserAgreement.aspx">User Agreement</a> -=-
+                            <a href="http://www.fordscleaning.com/FAQ.aspx">FAQ</a></td>
+                        <td style="width: 30px; text-align: right;">
+                        <div id="loginButton" runat="server">
+                        </div>                     
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div style="width: 750px; color: #000000; font-size: 11px; margin-left: auto; margin-right: auto;
+                padding-left: 15px;">
+                Site by <a href="http://www.chevtek.com">Chevtek</a>.
+            </div>
+        </div>
+    </form>
+</body>
+</html>

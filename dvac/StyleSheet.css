@@ -1,0 +1,50 @@
+﻿body 
+{
+	background-color: #772222;
+	background-image: url(images/background.png);
+}
+
+#frame
+{
+	width: 800px;
+	margin: auto;
+}
+
+#top
+{
+	background-image: url(images/banner.png);
+	background-repeat: no-repeat;
+	height: 100px;
+	text-align: right;
+	padding-top: 10px;
+	padding-right: 25px;
+}
+
+#middle
+{
+	border-left: solid 12px #ffffff;
+	border-right: solid 14px #ffffff;
+	background-image: url(images/background.png);
+	background-color: #772222;	
+}
+
+#bottom
+{
+	background-image: url(images/bottom.png);
+	height: 50px;	
+}
+
+a:link
+{
+	Color:#ffff99;
+}
+
+a:visited
+{
+	Color:#ffff99;	
+}
+
+a:hover
+{
+	Color:#EF7148;
+}

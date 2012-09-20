@@ -1,0 +1,192 @@
+﻿body
+{
+	background-image: url(http://www.fordscleaning.com/images/bubbles.jpg);
+	background-position:top;
+	background-repeat:repeat;
+	background-attachment:fixed;
+}
+
+#frame
+{
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+	width:799px;
+}
+
+#top
+{	
+	text-align:left;
+	display:block;
+	margin-bottom: -4px;
+}
+
+#navbar
+{
+	text-align:center;
+	display:block;
+	background-color: #ffffff;
+	border-left: solid 23px #aa0000;
+	border-right: solid 16px #aa0000;
+	padding-bottom:15px;
+}
+
+#middle
+{
+	border-left: solid 23px #aa0000;
+	border-right: solid 16px #aa0000;
+	display:block;
+}
+
+#bottom
+{
+	display:block;
+	text-align:center;
+	font-size:small;
+}
+
+#content
+{
+	padding: 10px;
+	background-color: #ffffff;
+	font-family:Arial;
+	font-size: 18px;
+}
+
+.panelTitle
+{
+	margin-top: 10px;
+	margin-left: 50px;
+	margin-right: 50px;
+	padding: 5px;
+	background-color: #aa0000;
+	color: #ffffff;
+	text-align:center;
+	font-weight:bold;
+}
+
+.panel
+{
+	text-align:center;
+	padding: 5px;
+	margin-bottom: 3px;
+	margin-left: 50px;
+	margin-right: 50px;
+	background-color: #ffffcc;
+	border: solid 5px #aa0000;
+	font-family:Arial;
+}
+
+.header
+{
+	font-size:30px;
+	padding: 3px;	
+	color: #990000;	
+}
+
+img.home
+{
+	float:right;
+	margin-left:5px;	
+}
+
+img.noborder
+{
+	border-style:none;
+}
+
+img.floatLeft
+{
+	float:left;
+	margin-right:5px;
+}
+
+img.floatRight
+{
+	float:right;
+	margin-left:5px;
+}
+
+.serviceTitle
+{
+	padding: 3px;
+	background-color: #aa0000;
+	color: #ffffff;
+	text-align:left;
+	font-weight:bold;
+	margin-bottom: 5px;
+	margin-top: 10px;
+}
+
+.HelpBox
+{
+	width: 200px;
+	height: 230px;
+	border: solid 2px #000000;
+	margin: 10px;
+	padding: 10px;
+	color: Red;
+	font-size:small;
+	background-color: #FFFFCC;
+}
+
+td.labels
+{
+	vertical-align:top;
+	text-align:right;
+	width:200px
+}
+
+td.inputs
+{
+	vertical-align:top;
+	text-align:left;
+	width:550px;
+}
+
+
+.blog
+{
+	margin-bottom: 20px;
+}
+
+.blogtitle
+{
+	font-weight: bold;
+	font-size: x-large;
+	padding: 5px;
+	background-color: #aa0000;
+	color: #ffffff;
+	border: solid 1px #aa0000;
+}
+
+.blogcontent
+{
+	font-size: large;
+	padding: 10px;
+	background-color:#FFFFff;
+}
+
+.comment
+{
+	border: solid 0px #aa0000;
+}
+
+a:link.titlelink
+{
+	text-decoration:none;
+	color: #ffffff;
+}
+
+a:visited.titlelink
+{
+	text-decoration:none;
+	color: #ffffff;
+}
+
+a:hover.titlelink
+{
+	text-decoration:none;
+	color:#aa0000;
+	background-color: #ffffff;
+}
